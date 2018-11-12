@@ -1,1 +1,14 @@
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka1:8501/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka2:8502/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka3:8503/eureka/
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      label: master    #git上分支名，是master，还是其他分支的。默认master，如果是分支写分支名
+      profile: dev   #yml后缀名。yml文件名=spring.apllication.name+"-"+spring.cloud.config.profile
