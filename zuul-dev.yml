@@ -10,14 +10,14 @@ zuul:
   ignored-patterns:  #对哪些请求不做代理
   - /hystrix-ribbon-client/hystrix/restTemplateCall
 
-#防止代理访问超时
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 6000  #hystrix 默认超时时间设置
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
+# #防止代理访问超时
+# hystrix:
+#   command:
+#     default:
+#       execution:
+#         isolation:
+#           thread:
+#             timeoutInMilliseconds: 6000  #hystrix 默认超时时间设置
+# ribbon:
+#   ConnectTimeout: 3000
+#   ReadTimeout: 60000
