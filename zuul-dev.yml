@@ -1,8 +1,3 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka1:8501/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka2:8502/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka3:8503/eureka/
-
 #      可通过zuul.routes.名称.path和zuul.routes.名称.serviceId指定访问微服务对应的url路径：
 zuul:
   routes:
