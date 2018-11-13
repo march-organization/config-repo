@@ -16,6 +16,9 @@ zuul:
     eureka-client: /chander3/**    #注意：映射名不能重复，否则映射会绑定在第一次出现的服务商。将访问eureka-client服务的所有url映射为/chander/....
   ignored-patterns:  #对哪些请求不做代理
   - /hystrix-ribbon-client/hystrix/restTemplateCall
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
 
 #防止代理访问超时
 hystrix:
