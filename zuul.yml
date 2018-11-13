@@ -1,4 +1,3 @@
 
 loginURL:
-  - /login1
-  - /logn2
+  - /syspermission/auth/login
