@@ -1,3 +1,9 @@
+management:  #--这里的配置可以放在远端github上
+  endpoints:
+    web:
+      exposure:
+        include: "*"    #暴露所有地址  注意*号不要掉了双引号
+#        include: bus-refresh  #\暴露刷新地址
 
 turbine:
   aggregator:
