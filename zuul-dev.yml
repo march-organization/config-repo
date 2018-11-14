@@ -1,6 +1,9 @@
 spring:
   zipkin: #zipkin配置
     base-url: http://172.25.154.161:9411
+  sleuth:
+    sampler:
+      probability: 1.0   #抽样比例。这里表示100%的日志都输出到zipkin服务器
 management:  #--这里的配置可以放在远端github上
   endpoints:
     web:
