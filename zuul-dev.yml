@@ -13,6 +13,7 @@ management:  #--这里的配置可以放在远端github上
 
 #      可通过zuul.routes.名称.path和zuul.routes.名称.serviceId指定访问微服务对应的url路径：
 zuul:
+  sensitive-headers: 
   routes:
     api1:   #此处名子可以任意取
       path: /chander1/**      #自定义代理访问时url的前缀
